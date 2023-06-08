@@ -14,9 +14,9 @@ public class PizzaDAO {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pizza", "root", "root");
 
             Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("select nom, prix, nbrIngredients from pizza");
+            ResultSet rs = st.executeQuery("SELECT nom, prix, nbrIngredients FROM pizza");
             while (rs.next()) {
-                pizzas.add(new Pizza(rs.getString(1),rs.getString(2),rs.getInt(3)));
+                pizzas.add(new Pizza(rs.getString(1),rs.getDouble(2),rs.getInt(3)));
             }
             con.close();
         } catch (Exception e) {
@@ -32,7 +32,7 @@ public class PizzaDAO {
 
             PreparedStatement statement = con.prepareStatement("INSERT INTO pizza(nom, prix, nbrIngredients) VALUES(?,?,?)");
             statement.setString(1,pizza.getNom());
-            statement.setString(2,pizza.getPrix());
+            statement.setDouble(2,pizza.getPrix());
             statement.setInt(3,pizza.getNombreIngredients());
 
             statement.executeUpdate();

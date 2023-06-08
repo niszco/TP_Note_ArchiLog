@@ -5,11 +5,11 @@ import javafx.collections.ObservableList;
 public class Pizza {
     private int id;
     private String nom;
-    private String prix;
+    private Double prix;
     private Integer nombreIngredients;
 
 
-    public Pizza(String nom, String prix, int nombreIngredients) {
+    public Pizza(String nom, Double prix, int nombreIngredients) {
         this.nom = nom;
         this.prix = prix;
         this.nombreIngredients = nombreIngredients;
@@ -23,13 +23,13 @@ public class Pizza {
         this.nom = nom;
     }
 
-    public String getPrix() {
+    public Double getPrix() {
         return prix;
     }
 
-    public String setPrix(String prix) {
+    public Double setPrix(Double prix) {
         this.prix = prix;
-        return prix;
+        return this.prix;
     }
 
     public int getNombreIngredients() {

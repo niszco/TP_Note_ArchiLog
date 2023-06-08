@@ -8,6 +8,4 @@ module com.example.tp_note_archilog {
     exports com.example.tp_note_archilog;
     exports com.example.tp_note_archilog.Modele;
     opens com.example.tp_note_archilog.Modele to javafx.fxml;
-    exports com.example.tp_note_archilog.Tests;
-    opens com.example.tp_note_archilog.Tests to javafx.fxml;
 }
