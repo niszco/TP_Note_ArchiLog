@@ -14,6 +14,8 @@ class PizzaTest {
     }
     @Test
     public void setPrix() {
+        assertEquals(13.0, pizza.getPrix());
+        // Résultat attendu : 13.0 (valeur ajoutée lors de l'instanciation)
         assertEquals(11.0, pizza.setPrix(11.0));
         // Résultat attendu : 11.0;
     }
