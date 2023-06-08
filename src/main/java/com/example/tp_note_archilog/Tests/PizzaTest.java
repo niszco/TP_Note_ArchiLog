@@ -1,4 +1,4 @@
-package com.example.tp_note_archilog;
+package com.example.tp_note_archilog.Tests;
 
 import com.example.tp_note_archilog.Modele.Pizza;
 
